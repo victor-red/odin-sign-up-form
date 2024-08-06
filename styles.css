@@ -10,6 +10,16 @@
     --secondary-color: rgba(255, 218, 218, 0.726);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input, textarea, select{
+    font-family: inherit;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -39,6 +49,12 @@ button:hover{
     color: var(--primary-color);
     cursor: pointer ;
 }
+
+form{
+    color: var(--primary-color);
+}
+
+
 
 .page-container{
     display: flex;
@@ -102,7 +118,7 @@ button:hover{
     justify-content: flex-start;
     align-items: flex-end;
     height: 35vh;
-    width: inherit;
+    width: 100%;
     background-color: var(--primary-color);
 }
 
@@ -114,16 +130,29 @@ button:hover{
     padding-bottom: 5vh;
 }
 
-.form-div{
+.form-bg-div{
     height: 30vh;
-    width: inherit;
+    width: 100%;
     background-color:var(--secondary-color);
     box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
 }
 
+.form-div{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30vw;
+    max-height: 15vw;
+    padding-left: 2vw;
+}
+
+.form-text{
+    font-size: 1.5rem;
+    padding-left: 2vw;
+}
+
 .account-div{
     height: 35vh;
-    width: inherit;
+    width: 100%;
     background-color: var(--primary-color);
 }
 
@@ -134,4 +163,20 @@ button:hover{
 
 .login-text{
     color: var(--secondary-color);
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5vw;
+}
+
+.create-account-btn{
+    position: relative;
+    top: 8vh;
+}
+
+input{
+    border-radius: 3px;
+    border: solid 1px var(--primary-color);
 }
